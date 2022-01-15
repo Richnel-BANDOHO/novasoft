@@ -1,0 +1,93 @@
+package com.novasoft.Entity;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Paiements {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long paiementId;
+	@Column(name = "auteur")
+	private String auteur;
+	@Column(name = "date_paiement")
+	private Date datePaiement;
+	
+	@Column(name = "montant")
+	private float montant;
+	
+	@Column(name = "mois")
+	private String mois;
+	
+	@ManyToOne
+	private Eleve eleve;
+	
+	public String getMois() {
+		return mois;
+	}
+	
+	public void setMois(String mois) {
+		this.mois = mois;
+	}
+	
+	
+	
+	
+	public Paiements(String auteur, Date datePaiement, float montant, String mois, Eleve eleve) {
+		super();
+		this.auteur = auteur;
+		this.datePaiement = datePaiement;
+		this.montant = montant;
+		this.mois = mois;
+		this.eleve = eleve;
+	}
+
+	public Eleve getEleve() {
+		return eleve;
+	}
+
+	public void setEleve(Eleve eleve) {
+		this.eleve = eleve;
+	}
+
+	public Paiements() {
+		super();
+	}
+	public Long getPaiementId() {
+		return paiementId;
+	}
+	public void setPaiementId(Long paiementId) {
+		this.paiementId = paiementId;
+	}
+	public String getAuteur() {
+		return auteur;
+	}
+	public void setAuteur(String auteur) {
+		this.auteur = auteur;
+	}
+	public Date getDatePaiement() {
+		return datePaiement;
+	}
+	public void setDatePaiement(Date datePaiement) {
+		this.datePaiement = datePaiement;
+	}
+	public float getMontant() {
+		return montant;
+	}
+	public void setMontant(float montant) {
+		this.montant = montant;
+	}
+	
+	
+	
+	
+	
+
+}

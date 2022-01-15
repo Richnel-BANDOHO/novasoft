@@ -1,0 +1,5 @@
+package com.novasoft.repository;
+
+public interface TicketDeSortieRepository {
+
+}

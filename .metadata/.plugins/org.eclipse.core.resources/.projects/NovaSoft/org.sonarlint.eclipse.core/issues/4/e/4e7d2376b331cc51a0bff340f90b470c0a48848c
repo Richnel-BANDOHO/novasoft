@@ -1,0 +1,30 @@
+
+`
+java:S1905©"'Remove this unnecessary cast to "List".(ë®„ûÿÿÿÿ8ï¨œïÕ/H4RMINORZ
+CODE_SMELL
+n	java:S125½"<This block of commented-out lines of code should be removed.(ñã¶$8ï¨œïÕ/H›4RMAJORZ
+CODE_SMELL
+d
+java:S3655‹"7Call "Optional#isPresent()" before accessing the value.(í¢ŒÎ8¶ÖâÒÑ/H˜4RMAJORZBUG
+
+java:S1128"LRemove this unused import 'org.springframework.data.repository.query.Param'.(©”šô8ï¨œïÕ/H®4RMINORZ
+CODE_SMELL
+
+java:S3776%"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(÷ç¡Îùÿÿÿÿ8ï¨œïÕ/H¢4RCRITICALZ
+CODE_SMELL
+d
+java:S3655Í"7Call "Optional#isPresent()" before accessing the value.(½°Ñò8ï¨œïÕ/H™4RMAJORZBUG
+i
+java:S3655Ü"7Call "Optional#isPresent()" before accessing the value.(ÁÍ¥‰şÿÿÿÿ8µÆ×Ø/H°4RMAJORZBUG
+i
+java:S3655®"7Call "Optional#isPresent()" before accessing the value.(¶×ëøÿÿÿÿ8µÆ×Ø/Hš4RMAJORZBUG
+Œ
+java:S22932"YReplace the type specification in this constructor call with the diamond operator ("<>").(–«ëº8µÆ×Ø/H–4RMINORZ
+CODE_SMELL
+„	java:S117Ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñ—ˆ8µÆ×Ø/H±4RMINORZ
+CODE_SMELL
+i
+java:S3655ã"7Call "Optional#isPresent()" before accessing the value.(ìû»àøÿÿÿÿ8Î¾Û†Ù/H­4RMAJORZBUG
+g
+java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8ï¨œïÕ/H 4RMINORZ
+CODE_SMELL

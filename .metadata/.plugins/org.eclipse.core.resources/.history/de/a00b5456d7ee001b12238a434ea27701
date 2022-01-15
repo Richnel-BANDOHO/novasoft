@@ -1,0 +1,5 @@
+package com.novasoft.Service;
+
+public class MessageService {
+
+}

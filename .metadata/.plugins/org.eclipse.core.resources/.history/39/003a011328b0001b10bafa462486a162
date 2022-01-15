@@ -1,0 +1,191 @@
+package com.novasoft.Entity;
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Eleve implements Serializable{
+	
+	
+	
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long eleveId ;
+	
+	@Column(name = "eleve_name")
+   	private String eleveName;
+	
+	@Column(name = "eleve_first_name")
+	private String eleveFirstName ;
+	
+	
+	private Date eleveBirthdate ;
+	private String eleveSexe ;
+	private String elevePlaceOfBirth ;
+	private String eleveAddress;
+	private String elevePhoneNumber ;
+	private String eleveClasse ;
+	private String eleveSerie;
+	private String elevePassword; 
+	private String eleveUserName ;
+	
+	
+	@OneToMany( cascade = CascadeType.All)
+	private Set<Paiements> paiements;
+	
+
+	
+	public Eleve() {
+		super();
+	}
+	
+
+	public Eleve(String eleveName, String eleveFirstName, Date eleveBirthdate, String eleveSexe,
+			String elevePlaceOfBirth, String eleveAddress, String elevePhoneNumber, String eleveClasse,
+			String eleveSerie, String elevePassword, String eleveUserName, Set<Paiements> paiements) {
+		super();
+		this.eleveName = eleveName;
+		this.eleveFirstName = eleveFirstName;
+		this.eleveBirthdate = eleveBirthdate;
+		this.eleveSexe = eleveSexe;
+		this.elevePlaceOfBirth = elevePlaceOfBirth;
+		this.eleveAddress = eleveAddress;
+		this.elevePhoneNumber = elevePhoneNumber;
+		this.eleveClasse = eleveClasse;
+		this.eleveSerie = eleveSerie;
+		this.elevePassword = elevePassword;
+		this.eleveUserName = eleveUserName;
+		this.paiements = paiements;
+	}
+
+
+
+
+
+
+
+
+	public Set<Paiements> getPaiements() {
+		return paiements;
+	}
+
+
+
+
+
+
+
+
+	public void setPaiements(Set<Paiements> paiements) {
+		this.paiements = paiements;
+	}
+
+
+
+
+
+
+
+
+	public Long getEleveId() {
+		return eleveId;
+	}
+	public void setEleveId(Long eleveId) {
+		this.eleveId = eleveId;
+	}
+	public String getEleveName() {
+		return eleveName;
+	}
+	public void setEleveName(String eleveName) {
+		this.eleveName = eleveName;
+	}
+	public String getEleveFirstName() {
+		return eleveFirstName;
+	}
+	public void setEleveFirstName(String eleveFirstName) {
+		this.eleveFirstName = eleveFirstName;
+	}
+	public Date getEleveBirthdate() {
+		return eleveBirthdate;
+	}
+	public void setEleveBirthdate(Date eleveBirthdate) {
+		this.eleveBirthdate = eleveBirthdate;
+	}
+	public String getEleveSexe() {
+		return eleveSexe;
+	}
+	public void setEleveSexe(String eleveSexe) {
+		this.eleveSexe = eleveSexe;
+	}
+	public String getElevePlaceOfBirth() {
+		return elevePlaceOfBirth;
+	}
+	public void setElevePlaceOfBirth(String elevePlaceOfBirth) {
+		this.elevePlaceOfBirth = elevePlaceOfBirth;
+	}
+	public String getEleveAddress() {
+		return eleveAddress;
+	}
+	public void setEleveAddress(String eleveAddress) {
+		this.eleveAddress = eleveAddress;
+	}
+	public String getElevePhoneNumber() {
+		return elevePhoneNumber;
+	}
+	public void setElevePhoneNumber(String elevePhoneNumber) {
+		this.elevePhoneNumber = elevePhoneNumber;
+	}
+	public String getEleveClasse() {
+		return eleveClasse;
+	}
+	public void setEleveClasse(String eleveClasse) {
+		this.eleveClasse = eleveClasse;
+	}
+	public String getEleveSerie() {
+		return eleveSerie;
+	}
+	public void setEleveSerie(String eleveSerie) {
+		this.eleveSerie = eleveSerie;
+	}
+	public String getElevePassword() {
+		return elevePassword;
+	}
+	public void setElevePassword(String elevePassword) {
+		this.elevePassword = elevePassword;
+	}
+	public String getEleveUserName() {
+		return eleveUserName;
+	}
+	public void setEleveUserName(String eleveUserName) {
+		this.eleveUserName = eleveUserName;
+	}
+	
+	
+	
+	
+//	List note: List<float>
+	
+	
+	
+	
+	
+	
+	
+
+}

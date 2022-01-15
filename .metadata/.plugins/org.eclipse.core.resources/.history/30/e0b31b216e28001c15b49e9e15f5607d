@@ -1,0 +1,42 @@
+package com.novasoft.Service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.novasoft.Entity.User;
+import com.novasoft.Repository.UserRepository;
+
+@Service
+public class UserService implements UserServiceImpl{
+
+	UserRepository userRepository;
+	
+	@Override
+	public void addUser(User user) {
+		userRepository.save(user);
+	}
+
+	@Override
+	public void deleteUserById(Long userId) {
+		userRepository.deleteById(userId);
+		
+	}
+
+	@Override
+	public User getUserById(Long userId) {
+		
+		return userRepository
+				.findById(userId)
+				.get();
+	}
+
+	@Override
+	public List<User> getAllUsers() {
+		
+		return (List<User>) userRepository.findAll();
+	}
+	
+	
+
+}

@@ -1,0 +1,12 @@
+
+y
+java:S4684"@Replace this persistent entity with a simple POJO or DTO object.(şÿ”Ó8ƒ ÙÒÑ/HÙ4RCRITICALZVULNERABILITY
+y
+java:S4684%"@Replace this persistent entity with a simple POJO or DTO object.(ëË“8ƒ ÙÒÑ/HÚ4RCRITICALZVULNERABILITY
+a
+java:S1481".Remove this unused "paiements" local variable.(ØÌÔÄ8Ç…ºÜ/HÛ4RMINORZ
+CODE_SMELL
+m	java:S125D"<This block of commented-out lines of code should be removed.(ª¾€8Ç…ºÜ/Hİ4RMAJORZ
+CODE_SMELL
+n	java:S125Z"<This block of commented-out lines of code should be removed.(¼µ£Õ8Ç…ºÜ/Hà4RMAJORZ
+CODE_SMELL

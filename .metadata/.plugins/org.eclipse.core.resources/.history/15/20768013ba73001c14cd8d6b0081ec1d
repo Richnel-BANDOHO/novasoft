@@ -1,0 +1,20 @@
+package com.novasoft.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.novasoft.entity.Materiel;
+import com.novasoft.service.MaterielServiceImpl;
+
+@RestController("/materiel")
+public class MaterielController {
+	
+	MaterielServiceImpl materielServiceImpl; 
+	
+	@PostMapping("/add")
+	public void addMateriel(@RequestBody Materiel materiel) {
+		
+	}
+
+}

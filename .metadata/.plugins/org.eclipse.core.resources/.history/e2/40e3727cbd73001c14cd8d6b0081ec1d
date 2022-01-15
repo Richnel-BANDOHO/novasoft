@@ -1,0 +1,23 @@
+package com.novasoft.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.novasoft.entity.Materiel;
+import com.novasoft.service.MaterielServiceImpl;
+
+@RestController("/materiel")
+public class MaterielController {
+	
+	
+	@Autowired
+	MaterielServiceImpl materielServiceImpl; 
+	
+	@PostMapping("/add")
+	public void addMateriel(@RequestBody Materiel materiel) {
+		materielServiceImpl.addMateriel(materiel);
+	}
+
+}

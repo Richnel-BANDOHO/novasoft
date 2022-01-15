@@ -1,0 +1,8 @@
+
+
+java:S1128"LRemove this unused import 'org.springframework.data.repository.query.Param'.(©”τ8‰¨Κ†Ω/H―3RMINORZ
+CODE_SMELL
+ƒ	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ϋ΄ιλ8‰¨Κ†Ω/H±3RMINORZ
+CODE_SMELL
+s	java:S125"<This block of commented-out lines of code should be removed.(¬η—ώÿÿÿÿ8‰¨Κ†Ω/H®3RMAJORZ
+CODE_SMELL

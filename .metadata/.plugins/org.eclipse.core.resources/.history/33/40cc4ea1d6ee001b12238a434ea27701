@@ -1,0 +1,6 @@
+package com.novasoft.Service;
+
+
+public interface MessageServiceImpl {
+
+}

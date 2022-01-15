@@ -1,0 +1,86 @@
+package com.novasoft.entity;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class ObjetSaisie {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long objetId;
+	private String objetName;
+	private Date dateDeSaisie;
+	private String nomDeLobjet;
+	private String condistionDeSaisie;
+	private String auteurSaisie;
+	private String matriculeEleve;
+	
+	public ObjetSaisie() {
+		super();
+	}
+	public ObjetSaisie(String objetName, Date dateDeSaisie, String nomDeLobjet, String condistionDeSaisie,
+			String auteurSaisie, String matriculeEleve) {
+		super();
+		this.objetName = objetName;
+		this.dateDeSaisie = dateDeSaisie;
+		this.nomDeLobjet = nomDeLobjet;
+		this.condistionDeSaisie = condistionDeSaisie;
+		this.auteurSaisie = auteurSaisie;
+		this.matriculeEleve = matriculeEleve;
+	}
+	public Long getObjetId() {
+		return objetId;
+	}
+	public void setObjetId(Long objetId) {
+		this.objetId = objetId;
+	}
+	public String getObjetName() {
+		return objetName;
+	}
+	public void setObjetName(String objetName) {
+		this.objetName = objetName;
+	}
+	public Date getDateDeSaisie() {
+		return dateDeSaisie;
+	}
+	public void setDateDeSaisie(Date dateDeSaisie) {
+		this.dateDeSaisie = dateDeSaisie;
+	}
+	public String getNomDeLobjet() {
+		return nomDeLobjet;
+	}
+	public void setNomDeLobjet(String nomDeLobjet) {
+		this.nomDeLobjet = nomDeLobjet;
+	}
+	public String getCondistionDeSaisie() {
+		return condistionDeSaisie;
+	}
+	public void setCondistionDeSaisie(String condistionDeSaisie) {
+		this.condistionDeSaisie = condistionDeSaisie;
+	}
+	public String getAuteurSaisie() {
+		return auteurSaisie;
+	}
+	public void setAuteurSaisie(String auteurSaisie) {
+		this.auteurSaisie = auteurSaisie;
+	}
+	public String getMatriculeEleve() {
+		return matriculeEleve;
+	}
+	public void setMatriculeEleve(String matriculeEleve) {
+		this.matriculeEleve = matriculeEleve;
+	}
+	
+	
+	
+	
+	
+	
+	
+
+}

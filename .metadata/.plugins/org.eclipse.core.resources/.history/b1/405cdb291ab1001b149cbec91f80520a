@@ -1,0 +1,47 @@
+package com.novasoft.Entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Fratrie {
+	
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long fratrieId;
+	private Long membreFamilleId;
+	
+	
+	
+	public Long getFratrieId() {
+		return fratrieId;
+	}
+	public void setFratrieId(Long fratrieId) {
+		this.fratrieId = fratrieId;
+	}
+	public Long getMembreFamilleId() {
+		return membreFamilleId;
+	}
+	public void setMembreFamilleId(Long membreFamilleId) {
+		this.membreFamilleId = membreFamilleId;
+	}
+	
+	
+	public Fratrie(Long membreFamilleId) {
+		super();
+		this.membreFamilleId = membreFamilleId;
+	}
+	
+	
+	public Fratrie() {
+		super();
+	}
+	
+	
+	
+	
+
+}

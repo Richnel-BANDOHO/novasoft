@@ -1,0 +1,135 @@
+package com.novasoft.Entity;
+
+import java.io.Serializable;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Tuteur implements Serializable {
+	
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	public Long tuteurId;
+	public String tuteurName;
+	public String tuteurFirstName;
+	public String tuteurAdress;
+	public String tuteurPhoneNumber;
+	public String tuteurEmail;
+	public String tuteurPassword;
+	public String tuteurUserName;
+	public String tuteurDadName;
+	public String tuteurMomName;
+	public String tuteurProfession;
+	
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "eleveName")
+	public List<Eleve> eleve;
+	
+	public Tuteur() {
+		super();
+	}
+	
+	
+	public Tuteur(String tuteurName, String tuteurFirstName, String tuteurAdress, String tuteurPhoneNumber,
+			String tuteurEmail, String tuteurPassword, String tuteurUserName, String tuteurDadName,
+			String tuteurMomName, String tuteurProfession) {
+		super();
+		this.tuteurName = tuteurName;
+		this.tuteurFirstName = tuteurFirstName;
+		this.tuteurAdress = tuteurAdress;
+		this.tuteurPhoneNumber = tuteurPhoneNumber;
+		this.tuteurEmail = tuteurEmail;
+		this.tuteurPassword = tuteurPassword;
+		this.tuteurUserName = tuteurUserName;
+		this.tuteurDadName = tuteurDadName;
+		this.tuteurMomName = tuteurMomName;
+		this.tuteurProfession = tuteurProfession;
+	}
+
+
+
+	public Long getTuteurId() {
+		return tuteurId;
+	}
+	public void setTuteurId(Long tuteurId) {
+		this.tuteurId = tuteurId;
+	}
+	public String getTuteurName() {
+		return tuteurName;
+	}
+	public void setTuteurName(String tuteurName) {
+		this.tuteurName = tuteurName;
+	}
+	public String getTuteurFirstName() {
+		return tuteurFirstName;
+	}
+	public void setTuteurFirstName(String tuteurFirstName) {
+		this.tuteurFirstName = tuteurFirstName;
+	}
+	public String getTuteurAdress() {
+		return tuteurAdress;
+	}
+	public void setTuteurAdress(String tuteurAdress) {
+		this.tuteurAdress = tuteurAdress;
+	}
+	public String getTuteurPhoneNumber() {
+		return tuteurPhoneNumber;
+	}
+	public void setTuteurPhoneNumber(String tuteurPhoneNumber) {
+		this.tuteurPhoneNumber = tuteurPhoneNumber;
+	}
+	public String getTuteurEmail() {
+		return tuteurEmail;
+	}
+	public void setTuteurEmail(String tuteurEmail) {
+		this.tuteurEmail = tuteurEmail;
+	}
+	public String getTuteurPassword() {
+		return tuteurPassword;
+	}
+	public void setTuteurPassword(String tuteurPassword) {
+		this.tuteurPassword = tuteurPassword;
+	}
+	public String getTuteurUserName() {
+		return tuteurUserName;
+	}
+	public void setTuteurUserName(String tuteurUserName) {
+		this.tuteurUserName = tuteurUserName;
+	}
+	public String getTuteurDadName() {
+		return tuteurDadName;
+	}
+	public void setTuteurDadName(String tuteurDadName) {
+		this.tuteurDadName = tuteurDadName;
+	}
+	public String getTuteurMomName() {
+		return tuteurMomName;
+	}
+	public void setTuteurMomName(String tuteurMomName) {
+		this.tuteurMomName = tuteurMomName;
+	}
+	public String gettuteurProfession() {
+		return tuteurProfession;
+	}
+	public void settuteurProfession(String tuteurProfession) {
+		this.tuteurProfession = tuteurProfession;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	
+	
+	
+}

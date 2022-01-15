@@ -1,0 +1,9 @@
+package com.novasoft.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.novasoft.entity.Materiel;
+
+public interface MaterielRepository extends JpaRepository<Materiel, Integer> {
+
+}

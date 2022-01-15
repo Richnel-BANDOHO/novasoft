@@ -1,0 +1,11 @@
+
+^
+java:S1168'"+Return an empty collection instead of null.(¥¹ï8–˜ĞÒÑ/HŸRMAJORZ
+CODE_SMELL
+e
+java:S3655"7Call "Optional#isPresent()" before accessing the value.(«´¾üÿÿÿÿ8¼ÖâÒÑ/RMAJORZBUG
+_
+java:S3655-"7Call "Optional#isPresent()" before accessing the value.(¸‡¢8¼ÖâÒÑ/RMAJORZBUG
+b
+java:S1135&"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿHRINFOZ
+CODE_SMELL

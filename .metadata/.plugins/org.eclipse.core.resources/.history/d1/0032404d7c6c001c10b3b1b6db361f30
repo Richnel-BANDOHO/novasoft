@@ -1,0 +1,60 @@
+package com.novasoft.entity;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+
+@Entity
+public class TicketDeSortie {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long ticketDeSortirId;
+	private String eleveName;
+	private String eleveFirstName;
+	private Date dateDuTicket;
+	
+	@Lob
+	private String motifDuTicket;
+	
+	
+	public Long getTicketDeSortirId() {
+		return ticketDeSortirId;
+	}
+	public void setTicketDeSortirId(Long ticketDeSortirId) {
+		this.ticketDeSortirId = ticketDeSortirId;
+	}
+	public String getEleveName() {
+		return eleveName;
+	}
+	public void setEleveName(String eleveName) {
+		this.eleveName = eleveName;
+	}
+	public String getEleveFirstName() {
+		return eleveFirstName;
+	}
+	public void setEleveFirstName(String eleveFirstName) {
+		this.eleveFirstName = eleveFirstName;
+	}
+	public Date getDateDuTicket() {
+		return dateDuTicket;
+	}
+	public void setDateDuTicket(Date dateDuTicket) {
+		this.dateDuTicket = dateDuTicket;
+	}
+	public String getMotifDuTicket() {
+		return motifDuTicket;
+	}
+	public void setMotifDuTicket(String motifDuTicket) {
+		this.motifDuTicket = motifDuTicket;
+	}
+	
+	
+	
+	
+
+}

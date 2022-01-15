@@ -1,0 +1,8 @@
+
+c
+java:S3655'"7Call "Optional#isPresent()" before accessing the value.(‹úùş8•ÈÈÜ/Hş4RMAJORZBUG
+Z
+java:S1905!"'Remove this unnecessary cast to "List".(ó‰¤¢8ÂíÙ/H×4RMINORZ
+CODE_SMELL
+h
+java:S3655,"7Call "Optional#isPresent()" before accessing the value.(ìû»àøÿÿÿÿ8ÒÖÈÜ/H€5RMAJORZBUG

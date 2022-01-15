@@ -1,0 +1,30 @@
+package com.novasoft.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.novasoft.entity.Materiel;
+import com.novasoft.repository.MaterielRepository;
+
+@Service
+public class MaterielService implements MaterielServiceImpl{
+
+	@Autowired
+	MaterielRepository materielRepository; 
+	
+	@Override
+	public void addMateriel(Materiel materiel) {
+		materielRepository.save(materiel);
+	}
+
+	@Override
+	public void deleteMaterielById(int mateirelId) {
+		materielService.deleteMaterielById(mateirelId);
+	}
+
+	@Override
+	public void modifyMateriel(Materiel materiel, int materielId) {
+		materielService.
+	}
+
+}
