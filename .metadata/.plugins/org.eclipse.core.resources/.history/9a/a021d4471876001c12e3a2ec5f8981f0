@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.novasoft.entity.Materiel;
 import com.novasoft.service.MaterielService;
 
-@RestController
+@RestController()
 @RequestMapping("/Materiel")
 public class MaterielController {
 	
