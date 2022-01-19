@@ -41,12 +41,11 @@ public class MaterielController {
 	}
 	
 	
-	@PutMapping("/modifyMateriel/{id}/{type}/{materielName}/{etatMateriel}")
-	public Materiel modifyMateriel(@PathVariable("id") Long id,@PathVariable("type") String type,@PathVariable("materielName") String materielName,@PathVariable("etatMateriel") String etatMateriel ) {
+	@PutMapping("/modifyMateriel")
+	public Materiel modifyMateriel() {
 		
-		return materielService.modifyMateriel(type, materielName, etatMateriel, id);
+		return null;
 	}
-	
 	
 	
 

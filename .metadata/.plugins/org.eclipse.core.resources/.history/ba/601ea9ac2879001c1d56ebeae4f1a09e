@@ -43,16 +43,11 @@ public class MaterielService implements MaterielServiceImpl{
 
 		Materiel mat = materielRepository.findById(id).orElse(null);
 		
-		if(mat != null) {
-			mat.setMaterielName(materielName);
-			mat.setEtatMaterielle(etatMateriel);
-			mat.setType(type);
-			materielRepository.save(mat);
-			return mat;
-		}else {
-			return null;
-		}
-		
+		mat.setMaterielName(materielName);
+		mat.setEtatMaterielle(etatMateriel);
+		mat.setType(type);
+		materielRepository.save(mat);
+		return mat;
 	}
 
 	@Override

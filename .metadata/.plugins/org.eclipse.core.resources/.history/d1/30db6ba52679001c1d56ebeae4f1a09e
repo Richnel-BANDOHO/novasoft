@@ -27,31 +27,12 @@ public class MaterielService implements MaterielServiceImpl{
 //		materielRepository.deleteById(materielId);
 //	}
 
-//	@Override
-//	public Materiel modifyMateriel(Long materielId) {
-//		Materiel mat = materielRepository.findById(materielId).get();
-//		mat.setMaterielName(materiel.getMaterielName());
-//		mat.setStatutMat(materiel.getStatutMat());
-//		mat.setType(materiel.getType());
-//		return materielRepository.save(entity)
-//		
-//	}
-	
 	@Override
-	public Materiel modifyMateriel(String type, String materielName, String etatMateriel, Long id) {
-
-
-		Materiel mat = materielRepository.findById(id).orElse(null);
-		
-		if(mat != null) {
-			mat.setMaterielName(materielName);
-			mat.setEtatMaterielle(etatMateriel);
-			mat.setType(type);
-			materielRepository.save(mat);
-			return mat;
-		}else {
-			return null;
-		}
+	public void modifyMateriel(Materiel materiel, Long materielId) {
+		Materiel mat = materielRepository.findById(materielId).get();
+		mat.setMaterielName(materiel.getMaterielName());
+		mat.setStatutMat(materiel.getStatutMat());
+		mat.setType(materiel.getType());
 		
 	}
 
@@ -92,8 +73,6 @@ public class MaterielService implements MaterielServiceImpl{
 		
 		return materielRepository.findAll();
 	}
-
-
 	
 	
 
