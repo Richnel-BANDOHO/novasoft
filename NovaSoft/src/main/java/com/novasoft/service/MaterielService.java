@@ -1,5 +1,8 @@
 package com.novasoft.service;
 
+import java.util.Date;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +17,8 @@ public class MaterielService implements MaterielServiceImpl{
 	
 	@Override
 	public void addMateriel(Materiel materiel) {
+		materiel.setStatutMat("Rendu");
+		materiel.setDatedeModificationDelEtat(new Date());
 		materielRepository.save(materiel);
 	}
 
@@ -32,7 +37,27 @@ public class MaterielService implements MaterielServiceImpl{
 	}
 
 	@Override
-	public void modifyStatut() {
+	public Materiel modifyStatut(Long matId, String matUser) {
+		
+		Materiel mat = materielRepository.findById(matId).get();
+		
+		if ("En utilisation".equals(mat.getStatutMat())) {
+			
+			mat.setStatutMat("Rendu");
+			mat.setHeurRemis(new Date());
+			
+			materielRepository.save(mat);
+			return mat;
+		}else{
+			mat.setStatutMat("En utilisation");
+			mat.setHeurePris(new Date());
+			mat.setMatUtilisateur(matUser);
+			materielRepository.save(mat);
+			return mat;
+		}
+		
+		
+		
 		// TODO Auto-generated method stub
 		
 	}
@@ -41,6 +66,12 @@ public class MaterielService implements MaterielServiceImpl{
 	public void deleteMaterielById(int mateirelId) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public List<Materiel> retrieveAllMateriel() {
+		
+		return materielRepository.findAll();
 	}
 	
 	

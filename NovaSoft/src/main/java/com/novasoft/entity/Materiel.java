@@ -1,5 +1,7 @@
 package com.novasoft.entity;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,25 +18,73 @@ public class Materiel {
 	private String type;
 	private String classeUtilsatrice;
 	private String matUtilisateur;
+	private Date heurePris;
+	private Date heurRemis;
 	
-	//private String etatMaterielle; bon état,moyen état, mauvais était
-
+	private String etatMaterielle;// bon état,moyen état, mauvais était
+	private Date datedeModificationDelEtat;
+	
 	public Materiel() {
 		super();
 	}
-
-	public Materiel(String materielName, String statutMat, String type, String classeUtilsatrice,
-			String matUtilisateur) {
+	
+	public Materiel(String materielName, String statutMat, String type, String classeUtilsatrice, String matUtilisateur,
+			Date heurePris, Date heurRemis, String etatMaterielle, Date datedeModificationDelEtat) {
 		super();
 		this.materielName = materielName;
 		this.statutMat = statutMat;
 		this.type = type;
 		this.classeUtilsatrice = classeUtilsatrice;
 		this.matUtilisateur = matUtilisateur;
+		this.heurePris = heurePris;
+		this.heurRemis = heurRemis;
+		this.etatMaterielle = etatMaterielle;
+		this.datedeModificationDelEtat = datedeModificationDelEtat;
 	}
 
 
 
+	public Date getDatedeModificationDelEtat() {
+		return datedeModificationDelEtat;
+	}
+
+
+	public void setDatedeModificationDelEtat(Date datedeModificationDelEtat) {
+		this.datedeModificationDelEtat = datedeModificationDelEtat;
+	}
+
+	public String getEtatMaterielle() {
+		return etatMaterielle;
+	}
+
+
+
+	public void setEtatMaterielle(String etatMaterielle) {
+		this.etatMaterielle = etatMaterielle;
+	}
+
+
+
+	public Date getHeurePris() {
+		return heurePris;
+	}
+
+	public void setHeurePris(Date heurePris) {
+		this.heurePris = heurePris;
+	}
+
+
+
+
+
+	public Date getHeurRemis() {
+		return heurRemis;
+	}
+
+
+	public void setHeurRemis(Date heurRemis) {
+		this.heurRemis = heurRemis;
+	}
 
 	public Long getMaterielId() {
 		return materielId;
